@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fortunes</title>
+  </head>
+  <body>
+    <table>
+      <tr><th>id</th><th>message</th></tr>
+      <%= for [id, message] <- fortunes do %>
+        <tr><td><%= id %></td><td><%= Hello.HTML.escape(message) %></td></tr>
+      <%= end %>
+    </table>
+  </body>
+</html>
